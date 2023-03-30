@@ -1,0 +1,78 @@
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+      float: left;
+      margin-right: 15px;
+  }
+  
+  .logo {
+    font-size: 200%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+  }
+  
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+  }
+  
+  nav {
+    background-color: #000;
+    padding: .5em;
+    position: sticky;
+    top:0px ;
+    left: 0px;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+  	justify-content: space-around;
+  }
+
+  /*导航栏各项要相等且居中，这里自己做的时候没加*/
+  nav ul li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+    flex: 1;
+  }
+  
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+
+  .feature {
+      width: 200px;
+  }
+
+  /*这里一开始没想到响应式设计，应该当width够大才分两列显示*/
+  @media screen and (min-width:40em){
+    .grid{
+      display: grid;
+      grid-template-columns: 2fr 1fr; /*这里明示是grid了，虽然flex也行*/
+      gap: 10px;
+    }
+  }
